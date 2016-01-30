@@ -1,6 +1,6 @@
 <?php
 $cfg = file_get_contents("listenerbot.cfg.json") or die("Config file not found.");
-$map = json_decode($cfg) or die("Config file is not valid JSON.");
+$map = json_decode($cfg, true) or die("Config file is not valid JSON.");
 
 $input = file_get_contents("php://input"); 
 $sJ = json_decode($input, true) or die("Invalid JSON input.");
